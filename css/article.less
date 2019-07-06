@@ -1,0 +1,305 @@
+//文章管理页面
+.left_list_article {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  li {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px dashed #ccc;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      transition: all .6s;
+    }
+
+    span {
+      margin-top: 7px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+      width: 100%;
+      display: block !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .left_list_article {
+    li {
+      width: 100% !important;
+
+    }
+  }
+}
+
+.article {
+  .title {
+    text-align: center;
+    font-size: 19px;
+    line-height: 40px;
+    font-weight: normal;
+  }
+
+  //前言
+  .preface {
+    background: #F6F6F6;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+
+  //文章详情
+  .article_info {
+    text-align: center;
+    margin: 25px 0;
+
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  //统一配置图片的格式
+  img {
+    min-width: 30%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  //加重的字
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    color: #1890ff;
+  }
+
+
+  //重点笔记
+  .stress {
+    span {
+      font-weight: bold;
+    }
+
+    border: 1px solid #2db7f5;
+    background: #dcdee2;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  //有序列表
+  .ol li,
+  .ul li {
+    margin: 7px 0;
+    font-size: 14px;
+    margin-left: 30px;
+
+    span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+
+  //层级样式设置
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 7px 15px;
+    border-left: 4px solid #39c;
+    border-bottom: 1px solid #39c;
+    font-size: 16px;
+    margin-left: 15px;
+    color: #444;
+    background: #fbfbfb;
+    font-weight: bold !important;
+  }
+
+  .h2 {
+    font-size: 18px;
+    margin: 10px -15px;
+  }
+
+  .h3 {
+    font-size: 18px;
+    margin: 10px -15px 10px 0;
+  }
+
+
+  .h4 {
+    font-size: 17px;
+    margin: 10px -15px 10px 15px;
+  }
+
+  .h5 {
+    font-size: 16px;
+    margin: 10px -15px 10px 30px;
+  }
+
+  .h6 {
+    font-size: 15px;
+    margin: 10px -15px 10px 45px;
+
+  }
+}
+
+//设置标签颜色
+.tag_a {
+  h3 {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1890ff;
+    border-radius: 5px;
+    margin: 3px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+}
+
+//模块名字标题h3
+.left_list>h3 {
+  font-size: 16px;
+
+  a {
+    font-size: 16px;
+  }
+
+  font-weight: normal;
+}
+
+
+.input_submit {
+  textarea {
+    margin-bottom: 10px;
+    background: #f5f5f5;
+    color: #777;
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    transition: background .3s;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  input {
+    outline: 0;
+    margin-right: 5px;
+    width: 200px;
+    padding: 7px 3px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #f5f5f5;
+    font-weight: 400;
+    transition: background .5s;
+  }
+
+  .submit {
+    margin-right: 0px;
+    margin-left: 20px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 7px 0;
+    width: 138px !important;
+    background: #1890ff;
+    color: #fff;
+    border: 0;
+  }
+
+}
+
+//评论列表修改
+//评论列表
+.comment_list ul {
+  list-style: none;
+  box-sizing: border-box;
+
+}
+
+.comment_list ul li {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px 0 10px 10px;
+  line-height: 15px;
+  border-bottom: 1px dashed #e9eaed;
+}
+
+.comment_list ul:after,
+.widget ul:before {
+  display: table;
+  line-height: 0
+}
+
+.comment_list ul li a,
+.comment_list ul li p {
+  padding: 2px 5px 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.comment_list ul li:last-of-type a {
+  border-bottom: none
+}
+
+.comment_list ul li p {
+  border: 0;
+  padding: 5px 0 0;
+  font-size: 12px;
+  color: #666
+}
+
+.comment_list ul:after {
+  clear: both
+}
+
+.comment_list ul li img {
+  float: left;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: -10px;
+  margin-right: 10px
+}
+
+.text-muted {
+  color: #777
+}
+
+.comment_list a.avatar:hover {
+  background-color: #fbfbfb;
+  border-bottom-color: #ddd
+}
