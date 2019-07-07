@@ -135,8 +135,8 @@
         <?php endif; ?>
 
         <div class="left_list text_info">
-          <p>以上就是黄国瑞博客带来的《<?php the_title(); ?>》，非常感谢您的观看！如果没有相关文字说明，本文即为黄国瑞博客原创(www.huangguorui.cn)，欢迎读者转载并保留本站版权！</p>
-          <p>以上就是<?php the_title(); ?>的详细内容，更多请持续关注本站其它相关文章！</p>
+          <p>以上就是黄国瑞博客带来的《<a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>》，非常感谢您的观看！如果没有相关文字说明，本文即为黄国瑞博客原创(www.huangguorui.cn)，欢迎读者转载并保留本站版权！</p>
+          <p>以上就是<a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>的详细内容，更多请持续关注本站其它相关文章！</p>
         </div>
       
         <div class="left_list text_info">

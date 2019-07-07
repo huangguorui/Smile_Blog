@@ -5,13 +5,13 @@
     <div class="left">
         <div class="left_list text_info article">
           <div class="about_text">
-            <h2>关于本站</h2>
+            <h2  class="h2">关于本站</h2>
             <p>
               原网址https://www.huanggr.cn，黄国瑞博客，一个关注web前端发展和专注于SEO优化的个人网站。
             </p>
           </div>
           <div class="about_text">
-            <h2>博主技术栈</h2>
+            <h2 class="h2" >博主技术栈</h2>
             <p>1、熟练掌握WEB前端知识，具有良好的编程习惯和逻辑思维能力</p>
             <p>2、熟练掌握基于DIV+CSS，JS/JQUERY的WEB编程技术</p>
             <p>3、熟练掌握VUE全家桶的使用，以及Axios,Vue-Router,Vuex</p>
@@ -21,7 +21,7 @@
 
           </div>
           <div class="about_text">
-            <h2>博客介绍</h2>
+            <h2  class="h2">博客介绍</h2>
             <p>
               首先介绍一下，所用技术，前端用的是HTML5+CSS3+Flex+Jquery，局部用到了Flex布局，全站标配HTTPS,拒绝网页劫持更懂你，通配响应式布局，然后你手机上也能随性所欲，为所欲为，考虑到使用JavaScript不利于优化等原因，所以减少了其的使用，后面增加用户体验性的效果将会逐步添加，目前已发现bug均已修复，如果还是存在问题，可给我发消息<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2315684336&site=qq&menu=yes">点击与博主交谈</a>。</p>
             <p>现在博客版本为V1.0版本，因目前界面虽已完成，但是与后面的交互只完成了主体部分，部分功能尚未完成，所以待修复完毕之后将会完全开源，欢迎Start</p>

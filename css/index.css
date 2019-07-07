@@ -260,13 +260,8 @@ p {
   height: 100%;
   display: block;
 }
-.header .nav li.current {
-  background: #2db7f5 !important;
-  color: #fff !important;
-}
 .header .nav li.current a {
-  color: #fff !important;
-  text-decoration: none !important;
+  color: #2db7f5 !important;
 }
 .header .nav {
   float: left;
@@ -298,8 +293,7 @@ p {
 }
 .header .nav .search input {
   display: inline-block;
-  width: 200px;
-  height: 150ox;
+  width: 150px;
   height: 30px;
   font-size: 14px;
   border: 0;

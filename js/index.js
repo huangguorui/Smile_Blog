@@ -1,9 +1,5 @@
+$(function () {
 
-
-
-
-$(function(){
- 
   //有序列表和无序列表
 
   //有序列表序列化
@@ -15,14 +11,14 @@ $(function(){
   $('.h2').each(function (index) {
     console.log(index);
     let value = $(this).html();
-    $(this).html('<strong>' + (index + 1) + "、</strong>" + value);
+    $(this).html('<strong style="margin-left: -35px;">' + (index + 1) + "、</strong>" + value);
   })
   $('.ul>li').each(function (index) {
     console.log(index);
     let value = $(this).html();
     $(this).html("<span>●</span>" + value);
   })
-  
+
 });
 
 

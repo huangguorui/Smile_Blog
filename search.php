@@ -83,11 +83,11 @@ echo $category->cat_name;
 }  
 */
 ?>  </span><span><i
-                  class="iconfont">&#xe6a3;</i><?php the_author(); ?></span><span><span><i class="iconfont">&#xe876;</i>w前端</span>
+                  class="iconfont">&#xe6a3;</i><?php the_author(); ?></span><span><span><i class="iconfont">&#xe876;</i>前端</span>
             </div>
           <?php //the_excerpt(); //摘要，这个先保留一下?>
 
-           <div style="    width: 100%;height: 92px;overflow: hidden;font-size:15px;line-height:30px;" > 
+           <div class="text_info" > 
            <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 210,"..."); ?>
   
   </div>
@@ -181,7 +181,7 @@ font-weight:normal;
 }
 .nav {
     height:50px!important;
-    width: 1050px;
+  width: 962px;;
 }
 .left {
     width: 1200px!important;
