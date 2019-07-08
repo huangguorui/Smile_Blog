@@ -12,6 +12,8 @@
   overflow: hidden;
   font-size: 15px;
   line-height: 25px;
+}
+.text_info p {
   text-indent: 2em;
 }
 /* Document scrollbar */
