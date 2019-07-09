@@ -67,7 +67,6 @@
 <script type="text/javascript">
   var num = 15;
   var clearTime = null;
-
   function autoPlay() {
     clearTime = setInterval(function () {
       num--;
