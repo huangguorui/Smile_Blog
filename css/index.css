@@ -1,3 +1,17 @@
+#gotop {
+  width: 35px;
+  height: 45px;
+  background: linear-gradient(45deg, #000 20%, #f00 50%, #090 80%);
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 25px 25px 0 0;
+  cursor: pointer;
+}
 .bg {
   position: fixed;
   left: 50px;
@@ -21,6 +35,7 @@
 }
 /* Document scrollbar */
 ::-webkit-scrollbar {
+  background: #ccc;
   width: 8px;
 }
 ::-webkit-scrollbar-track {

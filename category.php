@@ -7,7 +7,7 @@
           <div class="about_text">
             <h2  class="h2">当前目录下暂无文章</h2>
             <p>
-			<a href="/">请点击返回吧</a></h3>    
+			<a href="/">点击返回首页</a></h3>    
             </p>
           </div>
 
