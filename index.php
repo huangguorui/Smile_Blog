@@ -68,8 +68,8 @@ echo $category->cat_name;
             </div>
           <?php //the_excerpt(); //摘要，这个先保留一下?>
 
-           <div class="text_info" > 
-           <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 210,"..."); ?>
+           <div class="text_info " > 
+           <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 220,"..."); ?>
   
   </div>
             <div class="entry-meta">

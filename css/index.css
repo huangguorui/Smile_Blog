@@ -6,6 +6,9 @@
   height: 100px;
   background: #ccc;
 }
+.left_list .text_info {
+  text-indent: 2em;
+}
 .text_info {
   width: 100%;
   height: 75px;
@@ -112,6 +115,7 @@ p {
   transition: all .6s;
   padding: 15px;
   background: #fff;
+  border-radius: 5px;
 }
 .center .left .left_list .left_img {
   width: 230px;
