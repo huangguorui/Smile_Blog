@@ -22,6 +22,11 @@ $(function () {
 
 
 
+
+
+
+
+
   // 快速返回头部 start
   /*
   //老版本 不好用
@@ -123,46 +128,6 @@ $(function () {
     }
     //var se = document.documentElement.clientHeight;
   });
-
-
-
-
-
-  let navFlag = false
-
-  //手机左侧菜单渐进滑出
-  function tabNav() {
-    navFlag = !navFlag
-    if (navFlag) {
-      $('.slide_nav').css("width", '150px');
-      $('.slide_nav').css("opacity", '1');
-    } else {
-      $('.slide_nav').css("width", '0');
-      $('.slide_nav').css("opacity", '0');
-    }
-  }
-
-  //手机端搜索页面展开
-  function phoneSearch() {
-    let height = $('.phone_search').css("height")
-    height = height === "60px" ? "0px" : '60px';
-
-    if (height === "60px") {
-      $('.phone_search').css({
-        "height": '60px',
-        "opacity": 1,
-        "z-index": 99
-      });
-
-    } else {
-      $('.phone_search').css({
-        "height": '0',
-        "opacity": 0,
-        "zIndex": -1
-      });
-    }
-
-  }
 
 
   // 快速返回头部 end 

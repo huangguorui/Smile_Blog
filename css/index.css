@@ -382,7 +382,8 @@ p {
     margin-left: 0px !important;
   }
   .left_img {
-    width: 100% !important;
+    float: none !important;
+    margin: 0 auto !important;
   }
   .phone {
     display: block;
