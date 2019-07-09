@@ -7,7 +7,7 @@
           <div class="about_text">
             <h2  class="h2">关于本站</h2>
             <p>
-              原网址https://www.huanggr.cn，黄国瑞博客，一个关注web前端发展和专注于SEO优化的个人网站。
+              原网址https://www.huanggr.cn，黄国瑞博客，一个关注web前端发展和专注于SEO优化的个人网站。每天一篇原创文章，期待你的光临！
             </p>
           </div>
           <div class="about_text">
