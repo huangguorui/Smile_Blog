@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
 #gotop {
   width: 35px;
   height: 45px;
