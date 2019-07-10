@@ -31,18 +31,12 @@
             </p>
           </div>
         </div>
-
-
       </div>
-
-
       <?php get_sidebar( $name ); ?>
 
     </div>
   </div>
-
     <?php get_footer() ?>
-
 
 </body>
 </html>

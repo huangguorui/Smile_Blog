@@ -114,7 +114,6 @@ echo $category->cat_name;
     <?php get_footer() ?>
 
   </div>
-
 </body>
 </html>
 
