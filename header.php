@@ -1,66 +1,39 @@
 <?php 
-$webUrl = array(
-  '/',
-'/web/',
-'/javascript/',
-'/html5css3/',
-'/bloginfo/',
-'',
 
-);
-$webTItle = array(
-'web前端开发_HTMl5模板下载_Javascript源码分享_CSS3教程',
-'HTML5教程_html从入门到精通_模板下载',
-'Javascript教程_js从入门到精通_资源下载',
-'CSS3资源__css3从入门到精通_模板下载',
-'个人简介'
+//var_dump(get_option('huangguorui_options')['index_url']);
+$hello = explode(',',$source);
 
-);
-$description = array(
-  '本站提供前端资源下载，HTML5主题下载，Javascript源码分享，CSS3教程，Web前端技术问题处理，专注于web前端开发,同时分享前端资源和工具,快来加入我们吧!',
-  'HTML5教程_html从入门到精通_模板下载,专注web前端开发，提供HTML5教程，拥有完善的知识分享体系，帮助你快速入门前端，并且提供前端模板的下载！',
-  'Javascript教程_js从入门到精通_资源下载，常见特效分享，提供常见js源码下载，拥有完善的知识分享体系，，帮助你快速入门前端，快来学习吧',
-  'CSS3资源__css3从入门到精通_模板下载，常见问题分享，',
-  '这是一个不错的博客，你值得拥有'
-);
-$keywords = array(
-'web前端开发，前端博客，web前端，资源下载，HTMl5主题，黄国瑞博客',
-'HTML5下载，HTML5教程，CSS3教程，入门到精通_',
-'Javascript教程，js从入门到精通，资源下载，常见特效分享，js源码下载',
-'css3资源，css资源下载',
-'个人博客，博客简介',
-''
-
-);
-  $url = $_SERVER['REQUEST_URI']."";    //转换为字符
-  if($url=='/'){
-      $title = 'web前端开发_HTMl5资源_Javascript源码下载';
-      $description = $description[0];
-      $keywords = $keywords[0];
-
-  }else {
-    foreach($webUrl as $index=>$item){
-      if($item ==$url){
-        $title = $webTItle[$index];
-        $description = $description[$index];
-    $keywords = $keywords[$index];
-      }
-		  //
-		//  $description = '当前是文章页面';
-	//	$keywords = '当前是文章页面';
-    }
-    // if($url = $webUrl[0]){
-
-    // }else 
-    // if($url = $webUrl[1]){
-
-    // }else
-    // if($url = $webUrl[2]){
-
-    // }
-
-   // $title = "不是首页-黄国瑞博客";
+$webUrl = explode(',',get_option('huangguorui_options')['index_url']);
+$webTItle = explode(',',get_option('huangguorui_options')['index_title']);
+$description =  explode('/',get_option('huangguorui_options')['index_desc']);
+$keywords =  explode(',',get_option('huangguorui_options')['index_keys']);
+function clearLineBreaks($data){
+  //var_dump($data);
+  foreach($data as $index=>$item){
+    $data[$index] = str_replace(PHP_EOL, '', $item);   
+    //$webUrl[$index] = str_replace(array("\r\n", "\r", "\n"), "", $item);    //去除空格ing
   }
+  return $data;
+
+}
+//清除空格
+$webUrl = clearLineBreaks($webUrl);
+$webTItle = clearLineBreaks($webTItle);
+$description = clearLineBreaks($description);
+$keywords = clearLineBreaks($keywords);
+
+
+
+
+//闲杂只管标题
+$url = $_SERVER['REQUEST_URI']."";    //转换为字符
+
+//var_dump(array_search("/web/",$webUrl));
+$indexCur = array_search($url,$webUrl);
+//var_dump($indexCur);
+    $title = $webTItle[$indexCur];
+    $description = $description[$indexCur];
+    $keywords = $keywords[$indexCur];
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,9 +45,9 @@ $keywords = array(
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Author" content="黄瑞" />
-  <meta name="description" content="<?php if($title){echo $description;}?>" />
+  <meta name="description" content="<?php echo $description;?>" />
   <meta name="keywords" content="<?php echo $keywords;?>" />
-  <title><?php if($title){echo $title;}else{the_title();} ?>-黄国瑞博客</title>
+  <title><?php echo $title; ?>-黄国瑞博客</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.min.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/article.css">

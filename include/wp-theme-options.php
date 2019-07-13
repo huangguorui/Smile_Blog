@@ -151,7 +151,7 @@ function themeoptions_page() {
           </div>
         </div> -->
 
-        <div class="row clearfix">
+        <!-- <div class="row clearfix">
           <label for="slider_index_text class=" fl left-wrap"">右侧描述(slider)</label>
           <div class="fr right-wrap">
             <textarea id="slider_index_text" name="slider_index_text" rows="8" cols="100"><?php echo $a_options['slider_index_text'] ?></textarea>
@@ -161,6 +161,34 @@ function themeoptions_page() {
           <label for="footer-copyright" class="fl left-wrap">底部版权信息：</label>
           <div class="fr right-wrap">
             <textarea id="footer-copyright" name="footer-copyright" rows="8" cols="100"><?php echo $a_options['footer_copyright']; ?></textarea>
+          </div>
+        </div> -->
+
+        <div class="row clearfix">
+          <label for="index_url" class="fl left-wrap">seo优化-url：</label>
+          <div class="fr right-wrap">
+            <textarea id="index_url" name="index_url" rows="8" cols="100"><?php echo $a_options['index_url']; ?></textarea>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="index_title" class="fl left-wrap">seo优化-title：</label>
+          <div class="fr right-wrap">
+            <textarea id="index_title" name="index_title" rows="8" cols="100"><?php echo $a_options['index_title']; ?></textarea>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="index_desc" class="fl left-wrap">seo-优化描述：</label>
+          <div class="fr right-wrap">
+            <textarea id="index_desc" name="index_desc" rows="8" cols="100"><?php echo $a_options['index_desc']; ?></textarea>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="index_keys" class="fl left-wrap">seo-优化描述关键字：</label>
+          <div class="fr right-wrap">
+            <textarea id="index_keys" name="index_keys" rows="8" cols="100"><?php echo $a_options['index_keys']; ?></textarea>
           </div>
         </div>
 
@@ -502,6 +530,10 @@ function themeoptions_page() {
 		// 数据提交
     $options = array(
       'slider_index_text'=>$_POST['slider_index_text'],  //顶部自我介绍
+      'index_url'=>$_POST['index_url'],
+      'index_title'=>$_POST['index_title'],
+      'index_desc'=>$_POST['index_desc'],
+      'index_keys'=>$_POST['index_keys'],
       'update_themeoptions' => 'true',
       'label_logo' => $_POST['label-logo'],
       'snowflake' => $_POST['snow-flake'],
