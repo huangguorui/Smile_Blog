@@ -7,7 +7,7 @@
   height: 45px;
   background: linear-gradient(45deg, #000 20%, #f00 50%, #090 80%);
   position: fixed;
-  right: 15px;
+  right: 30px;
   bottom: 50px;
   text-align: center;
   line-height: 45px;
@@ -15,6 +15,7 @@
   font-size: 13px;
   border-radius: 25px 25px 0 0;
   cursor: pointer;
+  opacity: 0;
 }
 .bg {
   position: fixed;
@@ -122,13 +123,9 @@ p {
   height: 64px;
   overflow: hidden;
 }
-.center .left .border_hover:hover {
-  border: 1px solid blue;
-}
 .center .left .left_list {
   width: 100%;
   height: 200px;
-  border: 1px solid #fff;
   box-sizing: border-box;
   margin-bottom: 15px;
   transition: all .6s;
