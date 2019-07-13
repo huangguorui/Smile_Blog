@@ -1,3 +1,4 @@
-*.js linguist-language=java
-*.css linguist-language=java
-*.html linguist-language=java
+*.css linguist-language=php
+*.less linguist-language=php
+*.js linguist-language=php
+*.html linguist-language=php
