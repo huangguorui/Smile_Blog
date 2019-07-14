@@ -12,158 +12,12 @@ function themeoptions_page() {
   //加载css(wp自带)
   wp_enqueue_style('thickbox');
 ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/set.css">
-  <div class="wrap">
+
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/bootstrap.css">
+  <script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+
+  <div class="wrap" style="display:none">
     <h2>国瑞前端主题设置</h2>
-    <ul class="nav-wrap clearfix">
-      <!-- <li class="nav-list on">基本</li> -->
-      <!-- <!-- <li class="nav-list">SEO</li> -->
-      <!-- <li class="nav-list">图片</li>
-      <li class="nav-list">社交</li>  -->
-      <!-- <li class="nav-list">自定义代码</li> -->
-    </ul>
-    <form method="post" action="">
-      <input type="hidden" name="update_themeoptions" value="true">
-      <!-- 内容一 基本 -->
-      <!-- <div class="content-wrap content1">
-        <div class="row clearfix">
-            <label for="domain" class="fl left-wrap">站点域名：</label>
-            <div class="fr right-wrap">
-              <input
-                placeholder="例如<?php echo home_url(); ?>，结尾不要带/"
-                type="text"
-                class="url-inp"
-                name="domain"
-                id="domain"
-                value="<?php echo $a_options['domain']; ?>"
-              >
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">雪花背景特效：</label>
-          <div class="fr right-wrap">
-            <label for="snow-flake">开</label>
-            <input
-              type="radio"
-              id="snow-flake"
-              name="snow-flake"
-              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
-            >
-            <label for="aside-count-off">关</label>
-            <input
-              type="radio"
-              id="snow-flake"
-              name="snow-flake"
-              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
-            >
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏站点统计：</label>
-          <div class="fr right-wrap">
-            <label for="aside-count-on">开</label>
-            <input
-              type="radio"
-              id="aside-count-on"
-              name="aside-count"
-              value="on" <?php if($a_options['aside_count'] == 'on') echo 'checked'; ?>
-            >
-            <label for="aside-count-off">关</label>
-            <input
-              type="radio"
-              id="aside-count-off"
-              name="aside-count"
-              value="off" <?php if($a_options['aside_count'] == 'off' || $a_options['aside_count'] == '') echo 'checked'; ?>
-            >
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">首页电子邮件订阅：</label>
-          <div class="fr right-wrap">
-            <label for="text-pic-on">开</label>
-            <input
-              type="radio"
-              id="text-pic-on"
-              name="text-pic"
-              value="on" <?php if($a_options['text_pic'] == 'on') echo 'checked'; ?>
-            >
-            <label for="text-pic-off">关</label>
-            <input
-              type="radio"
-              id="text-pic-off"
-              name="text-pic"
-              value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*开启之前必须确保已安装WP Easy Post Mailer插件，并已配置好</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">开启https：</label>
-          <div class="fr right-wrap">
-            <label for="switch-https-on">开</label>
-            <input
-              type="radio"
-              id="tswitch-https-on"
-              name="switch_https"
-              value="on" <?php if($a_options['switch_https'] == 'on') echo 'checked'; ?>
-            >
-            <label for="switch-https-off">关</label>
-            <input
-              type="radio"
-              id="switch-https-off"
-              name="switch_https"
-              value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*开启后所有资源强制以https方式加载，必须确保网站支持https</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label for="sidebar-notice" class="fl left-wrap">侧边栏公告：</label>
-          <div class="fr right-wrap">
-            <textarea id="sidebar-notice" name="sidebar-notice" rows="5" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label for="footer-copyright" class="fl left-wrap">底部版权信息：</label>
-          <div class="fr right-wrap">
-            <textarea id="footer-copyright" name="footer-copyright" rows="8" cols="100"><?php echo $a_options['footer_copyright']; ?></textarea>
-          </div>
-        </div>
-      </div> -->
-      <!-- 内容二 SEO -->
-      <!-- <div class="content-wrap content2">
-        <!-- <div class="row clearfix">
-          <label for="keywords" class="fl left-wrap">首页关键词(keyword)</label>
-          <div class="fr right-wrap">
-            <textarea id="keywords" name="keywords" rows="8" cols="100"><?php echo $a_options['keywords'] ?></textarea>
-          </div>
-        </div>
-        <div class="row clearfix">
-          <label for="description class=" fl left-wrap"">首页描述(describe)</label>
-          <div class="fr right-wrap">
-            <textarea id="description" name="description" rows="8" cols="100"><?php echo $a_options['description'] ?></textarea>
-          </div>
-        </div> -->
-
-        <!-- <div class="row clearfix">
-          <label for="slider_index_text class=" fl left-wrap"">右侧描述(slider)</label>
-          <div class="fr right-wrap">
-            <textarea id="slider_index_text" name="slider_index_text" rows="8" cols="100"><?php echo $a_options['slider_index_text'] ?></textarea>
-          </div>
-        </div>
-        <div class="row clearfix">
-          <label for="footer-copyright" class="fl left-wrap">底部版权信息：</label>
-          <div class="fr right-wrap">
-            <textarea id="footer-copyright" name="footer-copyright" rows="8" cols="100"><?php echo $a_options['footer_copyright']; ?></textarea>
-          </div>
-        </div> -->
-
         <div class="row clearfix">
           <label for="index_url" class="fl left-wrap">seo优化-url：</label>
           <div class="fr right-wrap">
@@ -194,336 +48,243 @@ function themeoptions_page() {
 
       </div>
         
-      <!-- <div class="content-wrap content2">
-        <div class="row clearfix">
-          <label for="keywords" class="fl left-wrap">右侧栏目最上方文字描述：</label>
-          <div class="fr right-wrap">
-            <textarea id="keywords" name="keywords" rows="8" cols="100"><?php //echo $a_options['slider-index-text'] ?></textarea>
-          </div>
-        </div> -->
 
-			<!-- 内容三 图片设置 -->
-      <!-- <div class="content-wrap content3">
-        <div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">前台Logo：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="logo"
-                id="logo"
-                value="<?php echo $a_options['logo']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              前台Logo预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45（如若感觉不够清晰，可使用2倍尺寸图片，即270*90）</span>
-            </div>
-          </div>
-        </div>
+      <!DOCTYPE html>
+<html lang="en">
 
-				<div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">浏览器标签Logo：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="label-logo"
-                id="label-logo"
-                value="<?php echo $a_options['label_logo']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              标签图标预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['label_logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*浏览器标签窗口图标，最佳尺寸16*16或32*32</span>
-            </div>
-          </div>
-        </div>
+<head>
+    <style>
+        .box {
+            width: 800px;
+            min-height: 500px;
+            border: 1px solid red;
+            background: #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-				<div class="row">
-          <div class="margin-top-15 clearfix">
-						<label class="fl left-wrap" for="">默认缩略图：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-								name="thumbnail-img"
-                id="thumbnail-img"
-                value="<?php echo $a_options['thumbnail']; ?>">
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              默认缩略图预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['thumbnail']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*默认信息流缩略图最佳尺寸220*140，展示规则：先取文章中设置的特色图片，如果没有，取文章内容首张图片，再没有将启用当前默认缩略图</span>
-            </div>
-          </div>
-        </div>
+        .tab {
+            width: 100%;
+            height: auto;
+            padding-top: 20px;
+            box-sizing: border-box;
+            display: none;
+        }
 
-        <div class="row" style="display:none">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner大图：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner"
-                id="big-banner"
-                value="<?php echo $a_options['banner']['big_banner']['path']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner标题：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner-text"
-                id="big-banner-text"
-                value="<?php echo $a_options['banner']['big_banner']['text']; ?>"
-              >
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner链接：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner-link"
-                id="big-banner-link"
-                value="<?php echo $a_options['banner']['big_banner']['link']; ?>"
-              >
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              banner大图预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['banner']['big_banner']['path']; ?>" class="preview-img" style="max-width: 400px; max-height: 200px;" alt="">
-            </div>
-          </div>
-        </div>
-				<?php
-					for ($i = 1; $i < 4; $i++) {
-				?>
-					<div class="row" style="display:none">
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-<?php echo $i; ?>"
-	                id="small-banner-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['path']; ?>"
-	              >
-	              <input type="button" name="img-upload" value="选择文件">
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>标题：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-text-<?php echo $i; ?>"
-	                id="small-banner-text-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['text']; ?>"
-	              >
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>链接：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-link-<?php echo $i; ?>"
-	                id="small-banner-link-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['link']; ?>"
-	              >
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <div class="fl left-wrap">
-	              banner<?php echo $i; ?>大图预览：
-	            </div>
-	            <div class="fr right-wrap">
-	              <img src="<?php echo $a_options['banner']['small_banner']['banner'. $i]['path']; ?>" class="preview-img" style="max-width: 400px; max-height: 200px;" alt="">
-	            </div>
-	          </div>
-	        </div>
-				<?php
-					}
-				?>
+        .hots {
+            background: #f1f1f1;
+            min-height: 30px;
+            margin-top: 20px;
+            line-height: 30px;
+            text-indent: 2em;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
 
-      </div> -->
-      <!-- 内容四 社交 -->
-      <!-- <div class="content-wrap content4">
-        <div class="row clearfix">
-          <label for="QQ-number" class="fl left-wrap">QQ账号：</label>
-          <div class="fr right-wrap">
-						<input
-							type="text"
-							class="url-inp"
-							name="QQ-number"
-							id="QQ-number"
-							value="<?php echo $a_options['QQ-number']; ?>"
-						>
-          </div>
-        </div>
+        }
 
-        <div class="row clearfix">
-          <label for="phone-number" class="fl left-wrap">手机号码：</label>
-          <div class="fr right-wrap">
-						<input
-							type="text"
-							class="url-inp"
-							name="phone-number"
-							id="phone-number"
-							value="<?php echo $a_options['phone-number']; ?>"
-						>
-          </div>
-        </div>
+        .tab:nth-child(1) {
+            display: block;
 
-        <div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">微信账号二维码：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="weChat-number"
-                id="weChat-number"
-                value="<?php echo $a_options['weChat-number']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              微信二维码预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['weChat-number']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-            </div>
-          </div>
-        </div>
+        }
 
-				<div class="row clearfix">
-          <label for="reward-text" class="fl left-wrap">打赏欢迎语：</label>
-          <div class="fr right-wrap">
-						<input
-							type="text"
-							class="url-inp"
-							name="reward-text"
-							id="reward-text"
-							value="<?php echo $a_options['reward_text']; ?>"
-						>
-          </div>
-        </div>
+        .curbtn {
+            background-color: #337ab7 !important;
+            border-color: #2e6da4 !important;
+            color: #fff !important;
+        }
+        .container-main {
+          width:100%;
+          margin-top:15px;
 
-				<div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">支付宝收账二维码：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="alipay"
-                id="alipay"
-                value="<?php echo $a_options['alipay']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              收账二维码预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['alipay']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-            </div>
-          </div>
-        </div>
+        }
+        textarea {
+          font-size:13px!important;
+        }
+    </style>
+</head>
 
-				<!-- 微信付款二维码 -->
-				<!-- <div class="row"> -->
-					<!-- 支付宝付款二维码 -->
-          <!-- <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">微信收账二维码：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="wechatpay"
-                id="wechatpay"
-                value="<?php echo $a_options['wechatpay']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              收账二维码预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['wechatpay']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-            </div>
-          </div> -->
-        <!-- </div> -->
+<body>
+    <div class="container-main">
+        <div class="box">
+            <input class="btn btn-default curbtn" type="button" value="SEO优化设置">
+            <input class="btn btn-default " type="button" value="基本设置">
+            <input class="btn btn-default " type="button" value="图片显示设置">
+            <input class="btn btn-default " type="submit" value="联系方式设置">
 
-        <!-- <div class="row clearfix">
-          <label class="fl left-wrap" for="link">友情链接：</label>
-          <div class="fr right-wrap">
-            <textarea id="link" name="link" rows="15" cols="100"><?php echo $a_options['link']; ?></textarea>
-            <span class="warn" style="display:block">*每条链接占一行</span>
-          </div>
-        </div> -->
-      <!-- </div>  -->
-      <!-- 内容五 自定义代码 -->
-      <!-- <div class="content-wrap content5">
-        <div class="row clearfix">
-          <label class="fl left-wrap" for="login-css">后台登录页面css（不需要style标签）：</label>
-          <div class="fr right-wrap">
-            <textarea id="login-css" name="login-css" rows="8" cols="100"><?php echo $a_options['login_css']; ?></textarea>
-          </div>
+            <div class="hots">
+            </div>
+
+            <form action="" method="post">
+            <input type="hidden" name="update_themeoptions" value="true">
+                <div class="tab">
+                    <div class="form-group">
+                        <label for="index_url">请设置路径：</label>
+                        <textarea class="form-control" rows="7" name="index_url" id="index_url" placeholder="请设置路径："><?php echo $a_options['index_url']; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="index_title">请设置标题：</label>
+                        <textarea class="form-control" rows="7" id="index_title" name="index_title" placeholder="请设置标题："><?php echo $a_options['index_title']; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="index_keys">请设置关键词：</label>
+                        <textarea class="form-control" rows="7" id="index_keys"  name="index_keys" placeholder="请设置关键词："><?php echo $a_options['index_keys']; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="index_desc">请设置描述：</label>
+                        <textarea class="form-control" rows="7" id="index_desc" name="index_desc" placeholder="请设置描述："><?php echo $a_options['index_desc']; ?></textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="form-group">
+                        <label for="index_url">网站底部简介：</label>
+                        <textarea class="form-control" rows="4" id="index_url" placeholder="网站底部简介："></textarea>
+                    </div>
+                    <h3>侧边栏目【slider】配置</h3>
+                    <div class="form-group">
+                        <label for="index_url">网站全局介绍：</label>
+                        <textarea class="form-control" rows="4" id="index_url" placeholder="网站全局介绍："></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="index_url">友情链接简介：</label>
+                        <textarea class="form-control" rows="4" id="index_url" placeholder="友情链接简介："></textarea>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                        </label>
+                        <label>
+                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                        </label>
+                        <span>【默认开启】评论栏栏目设置</span>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                        </label>
+                        <label>
+                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                        </label>
+                        <span>【默认开启】友情链接栏目设置</span>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                        </label>
+                        <label>
+                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                        </label>
+                        <span>【默认开启】随机文章栏目设置</span>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                        </label>
+                        <label>
+                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                        </label>
+                        <span>【默认开启】标签云栏目设置</span>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                        </label>
+                        <label>
+                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                        </label>
+                        <span>【默认开启】最新文章栏目设置</span>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="form-group">
+                        <label for="index_url">请设置路径：</label>
+                        <textarea class="form-control" rows="6" id="index_url" placeholder="请设置路径："></textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="form-group">
+                        <label for="index_url">请设置路径：</label>
+                        <textarea class="form-control" rows="6" id="index_url" placeholder="请设置路径："></textarea>
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="submit" value="点击保存">
+
+            </form>
+
         </div>
-				<div class="row clearfix">
-          <label class="fl left-wrap" for="details-css">文章详情页css（不需要style标签）：</label>
-          <div class="fr right-wrap">
-            <textarea id="details-css" name="details-css" rows="8" cols="100"><?php echo $a_options['details_css']; ?></textarea>
-          </div>
-        </div>
-      </div> -->
-      <div class="row btn-wrap">
-        <input type="submit" class="submit-btn" name="bcn-admin-options" value="保存更改">
-      </div>
-    </form>
-  </div>
-  <script src="<?php bloginfo('template_url'); ?>/include/js/set.js"></script>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    let hots = [{
+        text: `SEO优化设置：每一个Url对应一个标题，一串关键词，一段描述，结尾均已英文状态下的逗号结尾，且每一条记录都需要换一行，示例如下：<br >
+          若当前的url为https://www.huangguorui.cn/web/<br >
+          那么路径就为: /web/<br >
+          描述就为：web前端开发，期待你的加入！<br >
+          关键词就为：web，前端开发<br >
+          这里值得注意的是，末尾一定要使用英文逗号间隔，并且每一条记录都需要换行，便于编辑<br >
+        `
+    }, {
+        text: '基本设置：主要可以设置侧边栏目各种个性化显示，自定义文字等，功能持续开发中……'
+    }, {
+        text: '图片显示设置：主要用来上传用户Logo，以及一些需要显示图片的地方，待完成'
+    }, {
+        text: '联系方式设置：主要用来设置网站上你的联系方式'
+    }];
+
+    var store = {
+        save(key, value) {
+            localStorage.setItem(key, JSON.stringify(value));
+        },
+        fetch(key) {
+            return JSON.parse(localStorage.getItem(key)) || [];
+        }
+    }
+    //初始化
+    $('.hots').html(hots[0].text)
+    
+
+
+    //先判断有没有，在进行赋值
+    if (store.fetch('curindex') != '') {
+        let val = store.fetch('curindex')
+        tabs(val)
+    } else {
+        console.log('没有值默认就显示第一个')
+        $('.tab').eq(0).css('display', 'block');
+    }
+
+
+
+
+    $('.box>input').each(function (index) {
+        console.log('index=', index)
+        $('.btn').eq(index).click(function () {
+            tabs(index)
+            //保存数据
+            store.save('curindex',
+                index
+            )
+        })
+    })
+
+    //定义切换函数
+
+    function tabs(i) {
+        $('.box >input').removeClass('curbtn')
+        $('.box >input').eq(i).addClass('curbtn')
+        $('.tab').css('display', 'none');
+        $('.tab').eq(i).css('display', 'block');
+        $('.hots').html(hots[i].text)
+    }
+</script>
+
+
 <?php
 	}
 	function themeoptions_update() {
@@ -534,52 +295,6 @@ function themeoptions_page() {
       'index_title'=>$_POST['index_title'],
       'index_desc'=>$_POST['index_desc'],
       'index_keys'=>$_POST['index_keys'],
-      'update_themeoptions' => 'true',
-      'label_logo' => $_POST['label-logo'],
-      'snowflake' => $_POST['snow-flake'],
-      'aside_count' => $_POST['aside-count'],
-      'switch_https' => $_POST['switch_https'],
-      'text_pic' => $_POST['text-pic'],
-      'logo' => $_POST['logo'],
-      'thumbnail' => $_POST['thumbnail-img'],
-      'domain' => $_POST['domain'],
-      'sidebar_notice' => $_POST['sidebar-notice'],
-      'footer_copyright' => $_POST['footer-copyright'],
-      'login_css'  => $_POST['login-css'],
-      'details_css'  => $_POST['details-css'],
-      'keywords' => $_POST['keywords'],
-      'description' => $_POST['description'],
-      'link' => $_POST['link'],
-      'QQ-number' => $_POST['QQ-number'],
-      'weChat-number' => $_POST['weChat-number'],
-      'phone-number' => $_POST['phone-number'],
-      'reward_text' => $_POST['reward-text'],
-      'alipay' => $_POST['alipay'],
-      'wechatpay' => $_POST['wechatpay'],
-			'banner' => array(
-				'big_banner' => array(
-					'path' => $_POST['big-banner'],
-					'text' => $_POST['big-banner-text'],
-					'link' => $_POST['big-banner-link'],
-				),
-				'small_banner' => array(
-					'banner1' => array(
-						'path' => $_POST['small-banner-1'],
-						'text' => $_POST['small-banner-text-1'],
-						'link' => $_POST['small-banner-link-1'],
-					),
-					'banner2' => array(
-						'path' => $_POST['small-banner-2'],
-						'text' => $_POST['small-banner-text-2'],
-						'link' => $_POST['small-banner-link-2'],
-					),
-					'banner3' => array(
-						'path' => $_POST['small-banner-3'],
-						'text' => $_POST['small-banner-text-3'],
-						'link' => $_POST['small-banner-link-3'],
-					)
-				)
-			)
     );
     update_option('huangguorui_options', stripslashes_deep($options));
 	}

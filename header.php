@@ -5,7 +5,7 @@ $hello = explode(',',$source);
 
 $webUrl = explode(',',get_option('huangguorui_options')['index_url']);
 $webTItle = explode(',',get_option('huangguorui_options')['index_title']);
-$description =  explode('/',get_option('huangguorui_options')['index_desc']);
+$description =  explode(',',get_option('huangguorui_options')['index_desc']);
 $keywords =  explode(',',get_option('huangguorui_options')['index_keys']);
 function clearLineBreaks($data){
   //var_dump($data);
