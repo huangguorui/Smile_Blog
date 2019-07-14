@@ -1,12 +1,18 @@
 <div class="right">
         <div class="rihgt_list">
         <p> <?php 
-                echo get_option('huangguorui_options')['slider_index_text'];
+          if(!get_option('huangguorui_options')['slider_top']){
+            echo '请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>';
+          }else{
+            echo   get_option('huangguorui_options')['slider_top'];
+          }
             ?></p>
          
         </div>
 
-        <div class="rihgt_list">
+    <?php  if (get_option('huangguorui_options')['is_text']) {  ?>
+ 
+        <div class="rihgt_list" >
           <h3>热门评论</h3>
           <div class="comment_list">
             <ul class="clearfix" style="height:500px;overflow:auto;">
@@ -30,13 +36,13 @@
             $output = convert_smilies($output);
             echo $output;
         ?> 
-
-
-
-
             </ul>
           </div>
         </div>
+        <?php  }  ?>
+     
+    <?php  if (get_option('huangguorui_options')['is_new_list']) { ?>
+ 
         <div class="rihgt_list">
         <div class="title">
             <h3>最新文章</h3>
@@ -73,12 +79,13 @@
                 </div>
               </li>
             <?php } wp_reset_query();?>
-
-
             </ul>
           </div>
-
         </div>
+        <?php  }  ?>
+     
+    <?php  if (get_option('huangguorui_options')['is_round_list']) { ?>
+
         <div class="rihgt_list">
           <div class="title">
             <h3>随机文章</h3>
@@ -101,30 +108,34 @@
           【<?php echo ++$i;?>】 <?php substr(the_title(), 0,10) ; ?></a>
 
             <?php } wp_reset_query();?>
-
             </div>
           </div>
-
-
         </div>
-
+        <?php  }  ?>
+     
+    <?php  if (get_option('huangguorui_options')['is_link']) { ?>
         <div class="rihgt_list">
-          <h3>友情链接</h3>
-          <p>友链可以提升搜索引擎友好度，欢迎大家踊跃互添友链！仅限同行业【程序类网站】。有意向的小伙伴可以在网站注册账号给我留言！</p>
+          <h3>友情链接</h3>       
+          <p> <?php 
+          if(!get_option('huangguorui_options')['link_desc']){
+            echo '请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>';
+          }else{
+            echo   get_option('huangguorui_options')['link_desc'];
+          }
+            ?></p>
+
           <div class="rihgt_link clearfix">
           <ul class="link_count">
           <?php wp_list_bookmarks('title_li&categorize=0'); ?>
-
           </ul>
           </div>
-
         </div>
-
         <div class="rihgt_list">
         <h3>标签云</h3>
         <?php wp_tag_cloud('smallest=12&largest=18&unit=px&number=0&orderby=count&order=DESC');?>
         </div>
-
+        <?php  }  ?>
+     
         <div class="rihgt_list" style="display: none">
           <img class="qqgroup" src="<?php bloginfo('template_url'); ?>/img/404.jpg" alt="">
 

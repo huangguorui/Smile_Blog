@@ -47,7 +47,7 @@ $indexCur = array_search($url,$webUrl);
   <meta name="Author" content="黄瑞" />
   <meta name="description" content="<?php echo $description;?>" />
   <meta name="keywords" content="<?php echo $keywords;?>" />
-  <title><?php echo $title; ?>-黄国瑞博客</title>
+  <title><?php echo $title; ?>-<?php   echo get_option('huangguorui_options')['title_right']; ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.min.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/article.css">
@@ -85,8 +85,8 @@ $indexCur = array_search($url,$webUrl);
 <div class="header clearfix">
       <div class="pc">
         <div class="logo">
-          <a href="/" title="黄国瑞博客">
-            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="黄国瑞博客">
+          <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
           </a>
         </div>
         <ul class="nav">
@@ -109,7 +109,9 @@ $indexCur = array_search($url,$webUrl);
         <div class="phone_title left_nav">
           <span class="" onclick="tabNav()"><i class="iconfont"
               style="font-size:35px;margin-left:5px;cursor:pointer;">&#xe6df;</i></span>
-          <h1>黄国瑞博客</h1>
+          <h1><?php   echo get_option('huangguorui_options')['title_right']; ?></h1>
+    
+   
           <span class="phone_right" onclick="phoneSearch()"><i class="iconfont"
               style="font-size:35px;margin-right:10px;cursor:pointer;">&#xe87d;</i></span>
         </div>

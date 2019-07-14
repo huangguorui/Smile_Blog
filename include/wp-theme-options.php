@@ -54,10 +54,31 @@ function themeoptions_page() {
 
 <head>
     <style>
+      /* Document scrollbar */
+::-webkit-scrollbar {
+  background: #ccc;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/* Scrollable element */
+::selection {
+  background: aquamarine;
+  color: black;
+}
+.custom-text-selection::selection {
+  background: deeppink;
+  color: white;
+}
         .box {
-            width: 800px;
+            width: 60%;
             min-height: 500px;
-            border: 1px solid red;
             background: #ccc;
             padding: 20px;
             box-sizing: border-box;
@@ -66,7 +87,7 @@ function themeoptions_page() {
         .tab {
             width: 100%;
             height: auto;
-            padding-top: 20px;
+            padding-top: 10px;
             box-sizing: border-box;
             display: none;
         }
@@ -96,6 +117,7 @@ function themeoptions_page() {
         .container-main {
           width:100%;
           margin-top:15px;
+          background:#ccc;
 
         }
         textarea {
@@ -118,6 +140,10 @@ function themeoptions_page() {
             <form action="" method="post">
             <input type="hidden" name="update_themeoptions" value="true">
                 <div class="tab">
+                <div class="form-group">
+                        <label for="title_right">全站连接符：</label>
+                        <input class="form-control" rows="7" name="title_right" id="index_url" placeholder="连接符一旦设定，就勿轻易修改，会影响SEO效果，请谨慎更改！" value="<?php echo $a_options['title_right']; ?>">
+                    </div>
                     <div class="form-group">
                         <label for="index_url">请设置路径：</label>
                         <textarea class="form-control" rows="7" name="index_url" id="index_url" placeholder="请设置路径："><?php echo $a_options['index_url']; ?></textarea>
@@ -138,62 +164,63 @@ function themeoptions_page() {
                 <div class="tab">
                     <div class="form-group">
                         <label for="index_url">网站底部简介：</label>
-                        <textarea class="form-control" rows="4" id="index_url" placeholder="网站底部简介："></textarea>
+                        <textarea class="form-control" rows="4" id="index_url" name="footer_copyright" placeholder="网站底部简介：可以写版权，备案号一类的东西"><?php echo $a_options['footer_copyright']; ?></textarea>
                     </div>
                     <h3>侧边栏目【slider】配置</h3>
                     <div class="form-group">
                         <label for="index_url">网站全局介绍：</label>
-                        <textarea class="form-control" rows="4" id="index_url" placeholder="网站全局介绍："></textarea>
+                        <textarea class="form-control" rows="4" id="index_url"  name="slider_top" placeholder="网站全局介绍："><?php echo $a_options['slider_top']; ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="index_url">友情链接简介：</label>
-                        <textarea class="form-control" rows="4" id="index_url" placeholder="友情链接简介："></textarea>
+                        <textarea class="form-control" rows="4" id="index_url" name="link_desc" placeholder="友情链接简介："><?php echo $a_options['link_desc']; ?></textarea>
                     </div>
 
                     <div class="radio">
                         <label>
-                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                            <input type="radio" name="is_text" value="0"  <?php echo !$a_options['is_text']?'checked':''; ?> >关闭
                         </label>
                         <label>
-                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                            <input type="radio" name="is_text" value="1"<?php echo $a_options['is_text']?'checked':''; ?> >开启
                         </label>
-                        <span>【默认开启】评论栏栏目设置</span>
+                        <span>【默认关闭】评论栏栏目设置</span>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                            <input type="radio" name="is_link" value="0"  <?php echo !$a_options['is_link']?'checked':''; ?>>关闭
                         </label>
                         <label>
-                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                            <input type="radio" name="is_link" value="1"  <?php echo $a_options['is_link']?'checked':''; ?>>开启
                         </label>
-                        <span>【默认开启】友情链接栏目设置</span>
+                        <span>【默认关闭】友情链接栏目设置</span>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                            <input type="radio" name="is_round_list" value="0"  <?php echo !$a_options['is_round_list']?'checked':''; ?>>关闭
                         </label>
                         <label>
-                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                            <input type="radio" name="is_round_list" value="1"  <?php echo $a_options['is_round_list']?'checked':''; ?>>开启
                         </label>
-                        <span>【默认开启】随机文章栏目设置</span>
+                        <span>【默认关闭】随机文章栏目设置</span>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                            <input type="radio" name="is_tag" value="0"  <?php echo !$a_options['is_tag']?'checked':''; ?>>关闭
                         </label>
                         <label>
-                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                            <input type="radio" name="is_tag" value="1"  <?php echo $a_options['is_tag']?'checked':''; ?>>开启
                         </label>
-                        <span>【默认开启】标签云栏目设置</span>
+                        <span>【默认关闭】标签云栏目设置</span>
                     </div>
+
                     <div class="radio">
                         <label>
-                            <input type="radio" name="blankRadio" value="0" aria-label="...">关闭
+                            <input type="radio" name="is_new_list" value="0" <?php echo !$a_options['is_new_list']?'checked':''; ?>>关闭
                         </label>
                         <label>
-                            <input type="radio" name="blankRadio" value="1" aria-label="...">开启
+                            <input type="radio" name="is_new_list" value="1" <?php echo $a_options['is_new_list']?'checked':''; ?>>开启
                         </label>
-                        <span>【默认开启】最新文章栏目设置</span>
+                        <span>【默认关闭】最新文章栏目设置</span>
                     </div>
                 </div>
                 <div class="tab">
@@ -211,24 +238,24 @@ function themeoptions_page() {
                 <input class="btn btn-primary" type="submit" value="点击保存">
 
             </form>
-
         </div>
     </div>
-
-
 
 </body>
 
 </html>
 <script>
+
+// let demoText =  `示例如下：<br >
+//           若当前的url为https://www.huangguorui.cn/web/<br >
+//           那么路径就为: /web/<br >
+//           描述就为：web前端开发，期待你的加入！<br >
+//           关键词就为：web，前端开发<br >
+//           这里值得注意的是，末尾一定要使用英文逗号间隔，并且每一条记录都需要换行，便于编辑<br >`;
+
     let hots = [{
-        text: `SEO优化设置：每一个Url对应一个标题，一串关键词，一段描述，结尾均已英文状态下的逗号结尾，且每一条记录都需要换一行，示例如下：<br >
-          若当前的url为https://www.huangguorui.cn/web/<br >
-          那么路径就为: /web/<br >
-          描述就为：web前端开发，期待你的加入！<br >
-          关键词就为：web，前端开发<br >
-          这里值得注意的是，末尾一定要使用英文逗号间隔，并且每一条记录都需要换行，便于编辑<br >
-        `
+        text: 'SEO优化设置：每一个Url对应一个标题，一串关键词，一段描述，结尾均已英文状态下的逗号结尾，且每一条记录都需要换一行'
+     
     }, {
         text: '基本设置：主要可以设置侧边栏目各种个性化显示，自定义文字等，功能持续开发中……'
     }, {
@@ -260,8 +287,6 @@ function themeoptions_page() {
     }
 
 
-
-
     $('.box>input').each(function (index) {
         console.log('index=', index)
         $('.btn').eq(index).click(function () {
@@ -290,11 +315,29 @@ function themeoptions_page() {
 	function themeoptions_update() {
 		// 数据提交
     $options = array(
+      
+      'title_right'=>$_POST['title_right'],  //全站连接符
+
       'slider_index_text'=>$_POST['slider_index_text'],  //顶部自我介绍
       'index_url'=>$_POST['index_url'],
       'index_title'=>$_POST['index_title'],
       'index_desc'=>$_POST['index_desc'],
       'index_keys'=>$_POST['index_keys'],
+      'is_text'=>$_POST['is_text'], //评论框是否可以显示
+      'is_new_list'=>$_POST['is_new_list'], //最新文章列表是否可以显示
+      'is_tag'=>$_POST['is_tag'], //标签云是否可以显示
+      'is_round_list'=>$_POST['is_round_list'], //随机文章是否可以显示
+      'is_link'=>$_POST['is_link'], //友情链接是否可以显示
+      'link_desc'=>$_POST['link_desc'], //链接描述
+      'footer_copyright'=>$_POST['footer_copyright'], //底部描述
+      'slider_top'=>$_POST['slider_top'], //首页描述
+
+       
+       
+      
+      
+      
+      
     );
     update_option('huangguorui_options', stripslashes_deep($options));
 	}

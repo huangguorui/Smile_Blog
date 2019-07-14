@@ -2,9 +2,13 @@
     Top
 </div>
 <div class="footer">
-    <?php 
-     echo get_option('huangguorui_options')['footer_copyright'];
-    ?>
+<p> <?php 
+          if(!get_option('huangguorui_options')['footer_copyright']){
+            echo '请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>';
+          }else{
+            echo   get_option('huangguorui_options')['footer_copyright'];
+          }
+            ?>，本主题由<a href="https://github.com/huangguorui/smile_Blog">国瑞前端</a>提供</p>
 </div>
 
 <script>
