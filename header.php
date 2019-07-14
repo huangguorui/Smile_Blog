@@ -31,9 +31,17 @@ $url = $_SERVER['REQUEST_URI']."";    //转换为字符
 //var_dump(array_search("/web/",$webUrl));
 $indexCur = array_search($url,$webUrl);
 //var_dump($indexCur);
-    $title = $webTItle[$indexCur];
-    $description = $description[$indexCur];
-    $keywords = $keywords[$indexCur];
+//  $indexCur!==false   //此方法也可
+if(is_int($indexCur)){
+  $title = $webTItle[$indexCur];
+  $description = $description[$indexCur];
+  $keywords = $keywords[$indexCur];
+}else {
+  $title ='警告!,该路径尚未配置，请检查';
+  $description ='警告!,该路径尚未配置，请检查';
+  $keywords ='警告!,该路径尚未配置，请检查';
+}
+ 
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,13 +91,13 @@ $indexCur = array_search($url,$webUrl);
 <body>
 <div class="main">
 <div class="header clearfix">
-      <div class="pc">
+      <div class="pc clearfix">
         <div class="logo">
           <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
           </a>
         </div>
-        <ul class="nav">
+        <ul class="nav clearfix">
           <li><a href="/"><i class="iconfont">&#xe87c;</i>首页</a></li>
           <li class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'current'; } ?>"><a href="/web/"><i class="iconfont">&#xe87e;</i>web前端开发</a></li>
           <li class="<?php if ( (is_category('3') || in_category('3')) && !is_page() && !is_home() ) { echo 'current'; } ?>"><a href="/javascript/"><i class="iconfont">&#xe6df;</i>Javascript资源</a></li>
