@@ -49,7 +49,6 @@ if(is_int($indexCur)){
   <meta charset="UTF-8">
     <!-- 强制https -->
   <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Author" content="黄瑞" />
@@ -90,8 +89,8 @@ if(is_int($indexCur)){
 </head>
 <body>
 <div class="main">
-<div class="header clearfix">
-      <div class="pc clearfix">
+<div class="header clearfix" >
+      <div class="pc clearfix >
         <div class="logo">
           <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
