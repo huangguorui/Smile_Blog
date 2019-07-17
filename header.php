@@ -90,7 +90,7 @@ if(is_int($indexCur)){
 <body>
 <div class="main">
 <div class="header clearfix" >
-      <div class="pc clearfix >
+      <div class="pc clearfix" >
         <div class="logo">
           <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
