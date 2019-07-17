@@ -88,8 +88,11 @@ if(is_int($indexCur)){
   </style>
 </head>
 <body>
+  <!-- 页面主体 -->
 <div class="main">
+  <!-- 页面头部 start -->
 <div class="header clearfix" >
+  <!-- pc头部 start -->
       <div class="pc clearfix" >
         <div class="logo">
           <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
@@ -112,29 +115,30 @@ if(is_int($indexCur)){
 			  </li>
         </ul>
       </div>
+  <!-- pc头部 end -->
+
+  <!-- 手机头部 start -->
       <div class="phone">
         <div class="phone_title left_nav">
-          <span class="" onclick="tabNav()"><i class="iconfont"
-              style="font-size:35px;margin-left:5px;cursor:pointer;">&#xe6df;</i></span>
-          <h1><?php   echo get_option('huangguorui_options')['title_right']; ?></h1>
-    
-   
-          <span class="phone_right" onclick="phoneSearch()"><i class="iconfont"
-              style="font-size:35px;margin-right:10px;cursor:pointer;">&#xe87d;</i></span>
+          <span class="" onclick="tabNav()"><i class="iconfont ft30px" >&#xe6df;</i></span>
+            
+          <h1><?php   echo get_option('huangguorui_options')['title_right']; ?></h1> 
+          <span class="phone_right" onclick="phoneSearch()"><i class="iconfont ft30px" >&#xe87d;</i></span>
         </div>
-
         <span class="phone_search">
-		
-		  <!-- <input type="text" placeholder="请点击搜索搜索内容……"><input type="submit" value="搜索"> -->
-		  <form role="search" method="get"  action="<?php echo home_url(); ?>/">
-					<input  name="s" id="s" value="" placeholder="输入关键字搜索" type="text" />
-					<input class="" type="submit" id="searchsubmit" vlaue="搜索">
-				</form>
+			<div class="phone_search_center">
+			<form role="search" method="get"  action="<?php echo home_url(); ?>/">
+				<input  name="s" id="s" value="" placeholder="输入关键字搜索" type="text" />
+				<input class="" type="submit" id="searchsubmit" vlaue="搜索">
+			</form>
+			</div>
 
         </span>
 
 		
       </div>
+  <!-- 手机头部 end -->
+
 
     </div>
     <div class="slide_nav">
@@ -146,3 +150,5 @@ if(is_int($indexCur)){
         <li><a style="color:#fff;" href="/bloginfo/"><i class="iconfont">&#xe876;</i>关于博主</a></li>
       </ul>
     </div>
+
+  <!-- 页面头部 start -->

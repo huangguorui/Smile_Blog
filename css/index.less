@@ -1,3 +1,10 @@
+// 手机顶部图标大小调整
+.ft30px {
+  font-size: 35px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+}
+
 ::-webkit-scrollbar {
   /*隐藏滚轮*/
   display: none;
@@ -495,8 +502,9 @@ p {
 
 @media screen and (min-width: 1200px) {
   .slide_nav {
+
     transition: none;
-    width: 0 !important;
+    display: none;
 
   }
 
@@ -592,11 +600,16 @@ p {
       opacity: .5;
       z-index: 99;
       overflow: hidden;
+
       //transition: all .6s;
+      .phone_search_center {
+        width: 235px;
+        margin: 0 auto;
+      }
 
       input {
         display: inline-block;
-        width: 200px;
+        //width: 200px;
         height: 150ox;
         height: 36px;
         border: 0; // 去除未选中状态边框
@@ -613,12 +626,12 @@ p {
 
       input:nth-child(1) {
         background: #ccc;
-        margin-left: 42px;
+        //margin-left: 42px;
       }
 
       input:nth-child(2) {
         margin-left: 15px;
-        width: 70px;
+        //width: 70px;
         cursor: pointer;
         background: #2db7f5;
         color: #fff;
