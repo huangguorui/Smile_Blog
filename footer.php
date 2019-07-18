@@ -7,11 +7,10 @@
 <div class="contact">
  <h3>  如有疑问，可联系我：</h3>
  <ul>
-	<li>QQ号： <a href="##"><?php textReturn('qq'); ?></a></li>
-	<li>微信号： <a href="##"><?php textReturn('wechat'); ?></a></li>
-	<li>电话号码： <a href="##"><?php textReturn('phone');?></a></li>
+	<li>QQ号： <?php textReturn('qq'); ?></li>
+	<li>微信号： <?php textReturn('wechat'); ?></li>
+	<li>电话号码： <?php textReturn('phone'); ?></li>
  </ul>
-   
    
 </div>
 <div class="footer">
@@ -45,8 +44,6 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
-
-
 
 
     let navFlag = false
@@ -84,8 +81,6 @@ function phoneSearch() {
   }
 
 }
-
-
 
 
 </script>
