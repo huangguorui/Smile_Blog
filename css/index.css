@@ -1,4 +1,10 @@
-.auto {
+.round_list {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.contact {
   width: 150px;
   height: 200px;
   background: #fff;
@@ -9,7 +15,7 @@
   box-sizing: border-box;
   transition: all .6s;
 }
-.auto:hover {
+.contact:hover {
   left: 0px;
 }
 .ft30px {
@@ -371,6 +377,9 @@ p {
   }
 }
 @media screen and (max-width: 1200px) {
+  .contact {
+    display: none;
+  }
   .center .left .left_list .left_img img {
     height: 150px !important;
   }

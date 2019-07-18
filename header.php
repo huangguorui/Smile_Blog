@@ -1,12 +1,12 @@
 <?php 
 
-//var_dump(get_option('huangguorui_options')['index_url']);
+//var_dump(textReturn('')['index_url']);
 $hello = explode(',',$source);
 
-$webUrl = explode(',',get_option('huangguorui_options')['index_url']);
-$webTItle = explode(',',get_option('huangguorui_options')['index_title']);
-$description =  explode(',',get_option('huangguorui_options')['index_desc']);
-$keywords =  explode(',',get_option('huangguorui_options')['index_keys']);
+$webUrl = explode(',',textReturn('index_url',0));
+$webTItle = explode(',',textReturn('index_title',0));
+$description =  explode(',',textReturn('index_desc',0));
+$keywords =  explode(',',textReturn('index_keys',0));
 function clearLineBreaks($data){
   //var_dump($data);
   foreach($data as $index=>$item){
@@ -54,7 +54,7 @@ if(is_int($indexCur)){
   <meta name="Author" content="黄瑞" />
   <meta name="description" content="<?php echo $description;?>" />
   <meta name="keywords" content="<?php echo $keywords;?>" />
-  <title><?php echo $title; ?>-<?php   echo get_option('huangguorui_options')['title_right']; ?></title>
+  <title><?php echo $title; ?>-<?php   textReturn('title_right'); ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.min.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/article.css">
@@ -83,7 +83,6 @@ if(is_int($indexCur)){
       -webkit-text-stroke-width: 0.2px;
       -moz-osx-font-smoothing: grayscale;
       margin-right: 3px;
-
     }
   </style>
 </head>
@@ -95,8 +94,8 @@ if(is_int($indexCur)){
   <!-- pc头部 start -->
       <div class="pc clearfix" >
         <div class="logo">
-          <a href="/" title="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
-            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php   echo get_option('huangguorui_options')['title_right']; ?>">
+          <a href="/" title="<?php  textReturn('title_right'); ?>">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php  textReturn('title_right'); ?>">
           </a>
         </div>
         <ul class="nav clearfix">
@@ -122,7 +121,7 @@ if(is_int($indexCur)){
         <div class="phone_title left_nav">
           <span class="" onclick="tabNav()"><i class="iconfont ft30px" >&#xe6df;</i></span>
             
-          <h1><?php   echo get_option('huangguorui_options')['title_right']; ?></h1> 
+          <h1><?php   textReturn('title_right'); ?></h1> 
           <span class="phone_right" onclick="phoneSearch()"><i class="iconfont ft30px" >&#xe87d;</i></span>
         </div>
         <span class="phone_search">

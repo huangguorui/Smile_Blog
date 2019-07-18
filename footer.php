@@ -1,10 +1,10 @@
 <?php
-
+//虽然已经简化了函数，但是修改过于复杂，为防止出错，每次改一部分
 ?>
 <div id="gotop">
     Top
 </div>
-<div class="auto">
+<div class="contact">
  <h3>  如有疑问，可联系我：</h3>
  <ul>
 	<li>QQ号： <a href="##"><?php textReturn('qq'); ?></a></li>

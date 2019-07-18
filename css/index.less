@@ -1,6 +1,14 @@
+//随机文章溢出省略号
+.round_list {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
 //联系方式
 
-.auto {
+.contact {
   width: 150px;
   height: 200px;
   background: #fff;
@@ -532,6 +540,10 @@ p {
 
 //小于1200的都是手机端的
 @media screen and (max-width: 1200px) {
+  .contact {
+    display: none;
+  }
+
   .center .left .left_list .left_img img {
     height: 150px !important;
 
