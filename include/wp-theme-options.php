@@ -231,8 +231,16 @@ function themeoptions_page() {
                 </div>
                 <div class="tab">
                     <div class="form-group">
-                        <label for="index_url">请设置路径：</label>
-                        <textarea class="form-control" rows="6" id="index_url" placeholder="请设置路径："></textarea>
+                        <label for="qq">QQ号：</label>
+                        <input class="form-control"  name="qq" id="qq" placeholder="请设置QQ：" value="<?php echo $a_options['qq']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="wechat">微信：</label>
+                        <input class="form-control"  name="wechat" id="wechat" placeholder="请设置微信："value="<?php echo $a_options['wechat']; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话号码：</label>
+                        <input class="form-control"  name="phone" id="phone" placeholder="请设置手机号码："value="<?php echo $a_options['phone']; ?>">
                     </div>
                 </div>
                 <input class="btn btn-primary" type="submit" value="点击保存">
@@ -319,10 +327,10 @@ function themeoptions_page() {
       'title_right'=>$_POST['title_right'],  //全站连接符
 
       'slider_index_text'=>$_POST['slider_index_text'],  //顶部自我介绍
-      'index_url'=>$_POST['index_url'],
-      'index_title'=>$_POST['index_title'],
-      'index_desc'=>$_POST['index_desc'],
-      'index_keys'=>$_POST['index_keys'],
+      'index_url'=>$_POST['index_url'],//路径设置
+      'index_title'=>$_POST['index_title'],//标题设置
+      'index_desc'=>$_POST['index_desc'],//内容设置
+      'index_keys'=>$_POST['index_keys'],//关键词设置
       'is_text'=>$_POST['is_text'], //评论框是否可以显示
       'is_new_list'=>$_POST['is_new_list'], //最新文章列表是否可以显示
       'is_tag'=>$_POST['is_tag'], //标签云是否可以显示
@@ -331,9 +339,12 @@ function themeoptions_page() {
       'link_desc'=>$_POST['link_desc'], //链接描述
       'footer_copyright'=>$_POST['footer_copyright'], //底部描述
       'slider_top'=>$_POST['slider_top'], //首页描述
+      'qq'=>$_POST['qq'], //首页描述
+      'wechat'=>$_POST['wechat'], //首页描述
+      'phone'=>$_POST['phone'], //首页描述
 
        
-       
+      
       
       
       

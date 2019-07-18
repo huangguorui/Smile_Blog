@@ -1,12 +1,25 @@
+<?php
+
+?>
 <div id="gotop">
     Top
 </div>
+<div class="auto">
+ <h3>  如有疑问，可联系我：</h3>
+ <ul>
+	<li>QQ号： <a href="##"><?php textReturn('qq'); ?></a></li>
+	<li>微信号： <a href="##"><?php textReturn('wechat'); ?></a></li>
+	<li>电话号码： <a href="##"><?php textReturn('phone');?></a></li>
+ </ul>
+   
+   
+</div>
 <div class="footer">
 <p> <?php 
-          if(!get_option('huangguorui_options')['footer_copyright']){
+          if(!textReturn('footer_copyright',0)){
             echo '请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>';
           }else{
-            echo   get_option('huangguorui_options')['footer_copyright'];
+			textReturn('footer_copyright');  
           }
             ?>，本主题由<a href="https://github.com/huangguorui/smile_Blog">国瑞前端</a>提供</p>
 </div>

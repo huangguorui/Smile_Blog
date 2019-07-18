@@ -1,4 +1,16 @@
 <?php
+
+//设置公共函数
+function textReturn($text,$flag=1) {
+	if($flag)
+	echo get_option('huangguorui_options')[$text];
+	else
+	return get_option('huangguorui_options')[$text];
+}
+
+?>
+
+<?php
 // 引入模板主题设置文件
 if (is_admin()) require ('include/wp-theme-options.php');
 

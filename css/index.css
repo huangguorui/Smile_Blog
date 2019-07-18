@@ -1,3 +1,17 @@
+.auto {
+  width: 150px;
+  height: 200px;
+  background: #fff;
+  position: fixed;
+  left: -120px;
+  top: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all .6s;
+}
+.auto:hover {
+  left: 0px;
+}
 .ft30px {
   font-size: 35px !important;
   margin-right: 10px !important;
