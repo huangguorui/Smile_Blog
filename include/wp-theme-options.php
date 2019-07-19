@@ -339,16 +339,10 @@ function themeoptions_page() {
       'link_desc'=>$_POST['link_desc'], //链接描述
       'footer_copyright'=>$_POST['footer_copyright'], //底部描述
       'slider_top'=>$_POST['slider_top'], //首页描述
-      'qq'=>$_POST['qq'], //首页描述
-      'wechat'=>$_POST['wechat'], //首页描述
-      'phone'=>$_POST['phone'], //首页描述
+      'qq'=>$_POST['qq'], //首页qq联系方式
+      'wechat'=>$_POST['wechat'], //首页微信联系方式
+      'phone'=>$_POST['phone'], //首页联系电话
 
-       
-      
-      
-      
-      
-      
     );
     update_option('huangguorui_options', stripslashes_deep($options));
 	}
