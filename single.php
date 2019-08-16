@@ -291,62 +291,6 @@ else {
         </div>
 
     </div>
-
-<!-- 图片放大 -->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/scale/photoswipe.css">
-
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/scale/default-skin.css">
-
-<script src="<?php bloginfo('template_url'); ?>/js/photoswipe.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/photoswipe-ui-default.min.js"></script>
-<script>
-    var curImg = ''
-    let imgUrl = []
-    let maxLength
-    let items = []
-    $('.article img').each(function (index) {
-        $('.article img').eq(index).click(function () {
-            //点击就要清空
-            items = []
-            imgUrl = []
-            //这里是获取第一条数据 通过index
-            for (let i = index; i < index + 9; i++) {
-                curImg = $('.article img').eq(i).prop('src');
-                //图片不存在不存储
-                if (curImg != undefined) {
-                    imgUrl.push(curImg)
-
-                }
-            }
-            //这里需要构建循环语句进行遍历看看到底有多少张  存储url
-            imgUrl.forEach(function (currentValue, index, arr) {
-                //
-                items.push({
-                    src: currentValue,
-                    w: 1980,
-                    h: 1080
-                })
-            })
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // define options (if needed)
-            var options = {
-                // optionName: 'option value'
-                // for example:
-                index: 0 // start at first slide
-            };
-
-            // Initializes and opens PhotoSwipe
-            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        })
-
-
-    })
-</script>
-
-
-
 </body>
 </html>
 <style>
