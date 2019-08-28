@@ -170,7 +170,6 @@ if ($post_tags) {
     // 获取标签列表
     $tag_list[] .= $tag->term_id;
   }
-
   // 随机获取标签列表中的一个标签
   $post_tag = $tag_list[ mt_rand(0, count($tag_list) - 1) ];
 

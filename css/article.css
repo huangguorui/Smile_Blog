@@ -1,3 +1,9 @@
+.wp-caption.alignnone {
+  width: 100% !important;
+}
+.wp-caption-text {
+  text-align: center;
+}
 .left_list_article {
   width: 100%;
   height: auto;
@@ -49,6 +55,7 @@
 .article .article_info {
   text-align: center;
   margin: 10px 0;
+  color: #ccc;
 }
 .article .article_info span {
   display: inline-block;
