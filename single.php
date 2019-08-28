@@ -23,7 +23,7 @@
 		}
 	?>
   <meta name="keywords" content="<?php echo $keywords; ?>" />
-  <title><?php the_title();?>--<?php   echo get_option('huangguorui_options')['title_right']; ?></title>
+  <title><?php the_title();?>-<?php   echo get_option('huangguorui_options')['title_right']; ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.min.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">
@@ -170,6 +170,7 @@ if ($post_tags) {
     // 获取标签列表
     $tag_list[] .= $tag->term_id;
   }
+
   // 随机获取标签列表中的一个标签
   $post_tag = $tag_list[ mt_rand(0, count($tag_list) - 1) ];
 
