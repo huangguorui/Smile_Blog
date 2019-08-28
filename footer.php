@@ -1,6 +1,12 @@
 <?php
 //虽然已经简化了函数，但是修改过于复杂，为防止出错，每次改一部分
 ?>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?5267b4f4750c6680ff588f412687340f":"https://jspassport.ssl.qhimg.com/11.0.1.js?5267b4f4750c6680ff588f412687340f";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
 <div id="gotop">
     Top
 </div>
