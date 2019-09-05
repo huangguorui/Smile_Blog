@@ -29,7 +29,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 			textReturn('footer_copyright');  
           }
             ?>
-  <p>本主题由<a href="https://github.com/huangguorui/smile_Blog">国瑞前端</a>提供</p>
+  <p>本主题由<a href="https://github.com/huangguorui/smile_Blog" style="padding:0 8px;color:#2db7f5;">国瑞前端</a>提供</p>
 </div>
 
 <script>
