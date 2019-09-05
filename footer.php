@@ -1,3 +1,4 @@
+
 <?php
 //虽然已经简化了函数，但是修改过于复杂，为防止出错，每次改一部分
 ?>
@@ -7,6 +8,7 @@ var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.
 document.write('<script src="' + src + '" id="sozz"><\/script>');
 })();
 </script>
+<meta name="shenma-site-verification" content="ff3134bc8bcf1ce838163714fdde096c_1566994410"> 
 <div id="gotop">
     Top
 </div>
@@ -20,13 +22,14 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
    
 </div>
 <div class="footer">
-<p> <?php 
+ <?php 
           if(!textReturn('footer_copyright',0)){
-            echo '请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>';
+            echo '<p>请前往国瑞后台系统设置,<a href="/wp-admin/themes.php?page=wp-theme-options.php" target="_blank">点击跳转</a>></p>';
           }else{
 			textReturn('footer_copyright');  
           }
-            ?>，本主题由<a href="https://github.com/huangguorui/smile_Blog">国瑞前端</a>提供</p>
+            ?>
+  <p>本主题由<a href="https://github.com/huangguorui/smile_Blog">国瑞前端</a>提供</p>
 </div>
 
 <script>
